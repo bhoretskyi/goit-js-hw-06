@@ -22,11 +22,14 @@ const imageList = images.map((image) => {
   imageEl.src = image.url;
   imageEl.alt = image.alt;
   imageEl.width = 480;
-  
+  console.log(imageEl.alt);
 
-  
-  gallery.insertAdjacentHTML(
+  gallery.append(listEl);
+
+  listEl.insertAdjacentHTML(
     "beforeend",
-    `<li><img src = ${imageEl.src} alt = ${imageEl.alt} width = ${imageEl.width}</li>`
+    `<img src = ${imageEl.src}
+     alt = ${imageEl.alt}
+     width = ${imageEl.width}>`
   );
 });
