@@ -6,12 +6,10 @@ function onFormSubmit(event) {
   event.preventDefault();
   const mailFormEl = event.currentTarget.elements.email.value;
   const passwordFormEl = event.currentTarget.elements.password.value;
-  if (mailFormEl === "") {
-    alert("всі поля повинні бути заповнені");
-  } else if (passwordFormEl === "") {
-    alert("всі поля повинні бути заповнені");
-  }
+  if (mailFormEl === "" || passwordFormEl === "") {
+    return alert("всі поля повинні бути заповнені");
 
+  } 
   const formData = {
     mailFormEl,
     passwordFormEl,
